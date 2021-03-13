@@ -31,10 +31,10 @@ extension EncoderViewController: UIImagePickerControllerDelegate {
         
         // 2
         dismiss(animated: false) {
-//            guard let secondVC = self.storyboard?.instantiateViewController(identifier: "secondVC") as? SecondViewController else { return }
-//            let secondVM = SecondViewModel(with: videoUrl)
-//            secondVC.viewModel = secondVM
-//            self.present(secondVC, animated: false, completion: nil)
+            guard let encodingVC = self.storyboard?.instantiateViewController(withIdentifier: "encodingVC") as? EncodingViewController else { return }
+            let encodingVM = EncodingViewModel(with: videoUrl)
+            encodingVC.viewModel = encodingVM
+            self.present(encodingVC, animated: false, completion: nil)
             
         }
     }

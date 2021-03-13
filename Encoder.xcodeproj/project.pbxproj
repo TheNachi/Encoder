@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,7 @@
 		B6715A7E25FD6F7B00FCBA3E /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6715A7D25FD6F7B00FCBA3E /* Helper.swift */; };
 		B6715A8325FD70A200FCBA3E /* EncodingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6715A8225FD70A200FCBA3E /* EncodingViewController.swift */; };
 		B6715A8825FD714500FCBA3E /* EncodingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6715A8725FD714500FCBA3E /* EncodingViewModel.swift */; };
+		B6715AA325FD730F00FCBA3E /* AVAsset+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6715AA225FD730F00FCBA3E /* AVAsset+Extensions.swift */; };
 		CE5F3B5B2A472D576CF6D677 /* Pods_Encoder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3881693815F91B1D17221A /* Pods_Encoder.framework */; };
 		FF48F369B3A81C6350B1CA06 /* Pods_EncoderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5110EFFE44A3EFDF17BFAF13 /* Pods_EncoderTests.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,7 @@
 		B6715A7D25FD6F7B00FCBA3E /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		B6715A8225FD70A200FCBA3E /* EncodingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodingViewController.swift; sourceTree = "<group>"; };
 		B6715A8725FD714500FCBA3E /* EncodingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodingViewModel.swift; sourceTree = "<group>"; };
+		B6715AA225FD730F00FCBA3E /* AVAsset+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVAsset+Extensions.swift"; sourceTree = "<group>"; };
 		C4E65AE21FAB46812529ADCC /* Pods-Encoder-EncoderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Encoder-EncoderUITests.debug.xcconfig"; path = "Target Support Files/Pods-Encoder-EncoderUITests/Pods-Encoder-EncoderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,6 +200,7 @@
 		B6715A7525FD6B1800FCBA3E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B6715AA225FD730F00FCBA3E /* AVAsset+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				B6715A8325FD70A200FCBA3E /* EncodingViewController.swift in Sources */,
 				B6715A7E25FD6F7B00FCBA3E /* Helper.swift in Sources */,
 				B6715A8825FD714500FCBA3E /* EncodingViewModel.swift in Sources */,
+				B6715AA325FD730F00FCBA3E /* AVAsset+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
