@@ -99,13 +99,13 @@
 		B6715A3C25FD67FA00FCBA3E /* Encoder */ = {
 			isa = PBXGroup;
 			children = (
-				B6715A3D25FD67FA00FCBA3E /* AppDelegate.swift */,
-				B6715A3F25FD67FA00FCBA3E /* SceneDelegate.swift */,
-				B6715A4125FD67FA00FCBA3E /* ViewController.swift */,
-				B6715A4325FD67FA00FCBA3E /* Main.storyboard */,
-				B6715A4625FD67FD00FCBA3E /* Assets.xcassets */,
-				B6715A4825FD67FD00FCBA3E /* LaunchScreen.storyboard */,
-				B6715A4B25FD67FD00FCBA3E /* Info.plist */,
+				B6715A7625FD6B2100FCBA3E /* Helpers */,
+				B6715A7525FD6B1800FCBA3E /* Extensions */,
+				B6715A7425FD6B0E00FCBA3E /* Files */,
+				B6715A7325FD6B0700FCBA3E /* Views */,
+				B6715A7225FD6AFF00FCBA3E /* View Models */,
+				B6715A7125FD6AF700FCBA3E /* Models */,
+				B6715A7025FD6AEF00FCBA3E /* App */,
 			);
 			path = Encoder;
 			sourceTree = "<group>";
@@ -126,6 +126,62 @@
 				B6715A6125FD67FE00FCBA3E /* Info.plist */,
 			);
 			path = EncoderUITests;
+			sourceTree = "<group>";
+		};
+		B6715A7025FD6AEF00FCBA3E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B6715A3D25FD67FA00FCBA3E /* AppDelegate.swift */,
+				B6715A3F25FD67FA00FCBA3E /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B6715A7125FD6AF700FCBA3E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B6715A7225FD6AFF00FCBA3E /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		B6715A7325FD6B0700FCBA3E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B6715A4125FD67FA00FCBA3E /* ViewController.swift */,
+				B6715A4325FD67FA00FCBA3E /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B6715A7425FD6B0E00FCBA3E /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				B6715A4625FD67FD00FCBA3E /* Assets.xcassets */,
+				B6715A4825FD67FD00FCBA3E /* LaunchScreen.storyboard */,
+				B6715A4B25FD67FD00FCBA3E /* Info.plist */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		B6715A7525FD6B1800FCBA3E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B6715A7625FD6B2100FCBA3E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,7 +494,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M74ZCP24NH;
-				INFOPLIST_FILE = Encoder/Info.plist;
+				INFOPLIST_FILE = Encoder/Files/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +513,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M74ZCP24NH;
-				INFOPLIST_FILE = Encoder/Info.plist;
+				INFOPLIST_FILE = Encoder/Files/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
