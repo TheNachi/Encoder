@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Encoder View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="EncoderVC" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="EncoderViewController" customModule="Encoder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40z-nS-Wzx">
+                                <rect key="frame" x="30" y="668" width="354" height="50"/>
+                                <color key="backgroundColor" red="0.1843137255" green="0.20784313730000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="G2Z-4u-G2r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Select Video">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleOpenPhotos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="02o-DU-gjk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Video Encoder, click on the button below to select a video file to encode" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="984-R8-dhE">
+                                <rect key="frame" x="30" y="339" width="354" height="79"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="40z-nS-Wzx" firstAttribute="top" secondItem="984-R8-dhE" secondAttribute="bottom" constant="250" id="2jU-mR-nD9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="40z-nS-Wzx" secondAttribute="bottom" constant="144" id="7if-cS-s4u"/>
+                            <constraint firstItem="40z-nS-Wzx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="DCo-QQ-OmC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="40z-nS-Wzx" secondAttribute="trailing" constant="30" id="J0i-U9-6XS"/>
+                            <constraint firstItem="984-R8-dhE" firstAttribute="trailing" secondItem="40z-nS-Wzx" secondAttribute="trailing" id="deZ-VH-wiG"/>
+                            <constraint firstItem="984-R8-dhE" firstAttribute="leading" secondItem="40z-nS-Wzx" secondAttribute="leading" id="enF-PJ-2iZ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-574" y="121"/>
+        </scene>
+        <!--Encoding View Controller-->
+        <scene sceneID="ufX-iY-M3r">
+            <objects>
+                <viewController storyboardIdentifier="encodingVC" modalPresentationStyle="fullScreen" id="rhB-9Z-KNK" customClass="EncodingViewController" customModule="Encoder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9aA-4k-e1d">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9a6-dh-cQd">
+                                <rect key="frame" x="20" y="443" width="374" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="eFP-Je-K2u"/>
+                                </constraints>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encoding..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNA-Bs-ZW9">
+                                <rect key="frame" x="154.5" y="498" width="105" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jIa-nq-70C"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9a6-dh-cQd" firstAttribute="centerY" secondItem="jIa-nq-70C" secondAttribute="centerY" id="5Lr-86-pKH"/>
+                            <constraint firstItem="aNA-Bs-ZW9" firstAttribute="top" secondItem="9a6-dh-cQd" secondAttribute="bottom" constant="35" id="ThT-A7-da7"/>
+                            <constraint firstItem="9a6-dh-cQd" firstAttribute="leading" secondItem="jIa-nq-70C" secondAttribute="leading" constant="20" id="iYI-1L-qJf"/>
+                            <constraint firstItem="jIa-nq-70C" firstAttribute="trailing" secondItem="9a6-dh-cQd" secondAttribute="trailing" constant="20" id="jPH-9c-pwa"/>
+                            <constraint firstItem="aNA-Bs-ZW9" firstAttribute="centerX" secondItem="9a6-dh-cQd" secondAttribute="centerX" id="tLj-pk-XiC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progressView" destination="9a6-dh-cQd" id="rVE-nu-X8C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rrr-w2-WoQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="98.550724637681171" y="127.90178571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
