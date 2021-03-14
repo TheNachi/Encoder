@@ -24,7 +24,7 @@ class EncodingViewController: UIViewController {
     
     @objc func video(_ videoPath: String, didFinishSavingWithError error: Error?, contextInfo info: AnyObject) {
         let title = (error == nil) ? "Success" : "Error"
-        let message = (error == nil) ? "Video was saved successfully in your photos" : "Video failed to save"
+        let message = (error == nil) ? "Video was saved successfully in your photos, go back to encode more videos" : "Video failed to save"
         
         let alert = UIAlertController(
             title: title,
@@ -33,8 +33,13 @@ class EncodingViewController: UIViewController {
         alert.addAction(UIAlertAction(
                             title: "OK",
                             style: UIAlertAction.Style.cancel,
-                            handler: nil))
+                            handler: goBackToEncoderVC))
         present(alert, animated: true, completion: nil)
+    }
+    
+    func goBackToEncoderVC(action: UIAlertAction) {
+        guard let encoderVC = self.storyboard?.instantiateViewController(withIdentifier: "EncoderVC") as? EncoderViewController else { return }
+        self.present(encoderVC, animated: true, completion: nil)
     }
 }
 

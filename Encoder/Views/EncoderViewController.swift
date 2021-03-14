@@ -21,7 +21,6 @@ class EncoderViewController: UIViewController {
 
 extension EncoderViewController: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-        // 1
         guard let mediaType = info[UIImagePickerController.InfoKey.mediaType] as? String,
               mediaType == (kUTTypeMovie as String),
               let videoUrl = info[UIImagePickerController.InfoKey.mediaURL] as? URL else {
@@ -29,7 +28,6 @@ extension EncoderViewController: UIImagePickerControllerDelegate {
         }
         
         
-        // 2
         dismiss(animated: false) {
             guard let encodingVC = self.storyboard?.instantiateViewController(withIdentifier: "encodingVC") as? EncodingViewController else { return }
             let encodingVM = EncodingViewModel(with: videoUrl)
