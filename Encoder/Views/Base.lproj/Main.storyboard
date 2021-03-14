@@ -68,13 +68,21 @@
                                     <constraint firstAttribute="height" constant="20" id="eFP-Je-K2u"/>
                                 </constraints>
                             </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Encoding..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNA-Bs-ZW9">
+                                <rect key="frame" x="154.5" y="498" width="105" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jIa-nq-70C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="9a6-dh-cQd" firstAttribute="centerY" secondItem="jIa-nq-70C" secondAttribute="centerY" id="5Lr-86-pKH"/>
+                            <constraint firstItem="aNA-Bs-ZW9" firstAttribute="top" secondItem="9a6-dh-cQd" secondAttribute="bottom" constant="35" id="ThT-A7-da7"/>
                             <constraint firstItem="9a6-dh-cQd" firstAttribute="leading" secondItem="jIa-nq-70C" secondAttribute="leading" constant="20" id="iYI-1L-qJf"/>
                             <constraint firstItem="jIa-nq-70C" firstAttribute="trailing" secondItem="9a6-dh-cQd" secondAttribute="trailing" constant="20" id="jPH-9c-pwa"/>
+                            <constraint firstItem="aNA-Bs-ZW9" firstAttribute="centerX" secondItem="9a6-dh-cQd" secondAttribute="centerX" id="tLj-pk-XiC"/>
                         </constraints>
                     </view>
                     <connections>

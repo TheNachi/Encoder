@@ -39,11 +39,3 @@ struct TrimError: Error {
 }
 
 
-struct CustomError: Error, LocalizedError {
-    var errorDescription: String? {
-        return NSLocalizedString(message, comment: "")
-    }
-
-    let message: String
-
-}

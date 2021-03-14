@@ -19,7 +19,7 @@ class EncodingViewController: UIViewController {
     }
     
     func bindViewModel(with viewModel: EncodingViewModel?) {
-        viewModel?.encodeVideo2()
+        viewModel?.encodeVideo()
     }
     
     @objc func video(_ videoPath: String, didFinishSavingWithError error: Error?, contextInfo info: AnyObject) {
@@ -45,7 +45,15 @@ class EncodingViewController: UIViewController {
 
 extension EncodingViewController: EncodingDelegate {
     func handleFail(_ error: Error) {
-        
+        let alert = UIAlertController(
+            title: "Error",
+            message: "\(error)",
+            preferredStyle: .alert)
+        alert.addAction(UIAlertAction(
+                            title: "OK",
+                            style: UIAlertAction.Style.cancel,
+                            handler: goBackToEncoderVC))
+        present(alert, animated: true, completion: nil)
     }
     
     

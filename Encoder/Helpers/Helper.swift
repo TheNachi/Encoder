@@ -7,7 +7,6 @@
 
 import AVKit
 import MobileCoreServices
-import Foundation
 
 enum VideoHelper {
   static func startMediaBrowser(
@@ -24,4 +23,14 @@ enum VideoHelper {
     mediaUI.delegate = delegate
     delegate.present(mediaUI, animated: true, completion: nil)
   }
+}
+
+
+struct CustomError: Error, LocalizedError {
+    var errorDescription: String? {
+        return NSLocalizedString(message, comment: "")
+    }
+
+    let message: String
+
 }

@@ -17,7 +17,7 @@ class EncodingViewModel {
         self.videoUrl = url
     }
     
-    func encodeVideo2()  {
+    func encodeVideo()  {
         let asset = AVAsset(url: self.videoUrl)
         if let trimmedVideo = try? asset.trim(startTime: CMTimeMake(value: 1, timescale: 10), endTime: CMTimeMake(value: 200, timescale: 10)) {
             let exporter = NextLevelSessionExporter(withAsset: trimmedVideo)
@@ -55,7 +55,6 @@ class EncodingViewModel {
             }, completionHandler: { result in
                 switch result {
                 case .success(let status):
-                    print(status, "the status")
                     switch status {
                     case .completed:
                         if let url = exporter.outputURL {
@@ -63,7 +62,7 @@ class EncodingViewModel {
                         }
                         break
                     default:
-                        self.delegate?.handleFail(CustomError(message: "for now"))
+                        self.delegate?.handleFail(CustomError(message: "Failed to export video"))
                         break
                     }
                     break
@@ -73,7 +72,7 @@ class EncodingViewModel {
                 }
             })
         } else {
-            self.delegate?.handleFail(CustomError(message: "for now"))
+            self.delegate?.handleFail(CustomError(message: "Couldn't trim the selected video"))
         }
         
     }
